@@ -5,11 +5,12 @@
 
 #include <string>
 
-class Assignment: public BaseElement {
+class If: public BaseElement {
  public:
-    Assignment(const std::string& variable, Expression* expression);
+    If(Expression* expr, CodeBlock* true_expr, CodeBlock* false_expr);
     void Accept(Visitor* visitor);
 
-    std::string variable_;
     Expression* expression_;
+    CodeBlock* true_expr_;
+    CodeBlock* false_expr_;
 };

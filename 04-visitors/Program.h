@@ -5,7 +5,8 @@
 
 class Program {
  public:
-    Program(AssignmentList* assignments, Expression* expression);
-    AssignmentList* assignments_;
-    Expression* expression_;
+    Program(std::string name, std::vector<VariableDeclBlock*> Var, StatementBlock* StatBlock);
+    std::string name_;
+    std::vector<VariableDeclBlock*> Var_;
+    StatementBlock* StatBlock_;
 };
